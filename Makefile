@@ -9,7 +9,7 @@ all:
 
 build:
 ifdef img
-	@docker build -t ${img} .
+	@docker build -t ${img}  --build-arg UID=$(id -u) --build-arg GID=$(id -g) .
 else
 	@echo 'img= not defined'
 endif
