@@ -1,5 +1,5 @@
 #!/bin/bash
-curl https://github.com/devd4n/docker_starter/Makefile -o Makefile
-curl https://github.com/devd4n/docker_starter/xephyrdocker -o xephyrdocker
+curl https://raw.githubusercontent.com/devd4n/docker_starter/master/Makefile -o Makefile
+curl https://raw.githubusercontent.com/devd4n/docker_starter/master/xephyrdocker -o xephyrdocker
 chmod +x xephyrdocker
 
