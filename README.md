@@ -1,2 +1,2 @@
 ### Install
-curl https://github.com/devd4n/docker_starter/install.sh | bash
+curl https://github.com/devd4n/docker_starter/blob/main/install.sh | bash
