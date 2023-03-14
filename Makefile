@@ -15,12 +15,14 @@ build:
   endif
 
 run:
-	@mkdir -p ${STORAGE}
-	@docker run -ti --rm ${img}
-
+  ifdef img
+      @docker run -ti --rm ${img}
+  else
+        @echo 'img= not defined'
+  endif
+	
 runX11:
   ifdef img
-      @mkdir -p ${STORAGE}
       @chmod +x ./xephyrdocker
       ./xephyrdocker : ${img}
   else
@@ -28,9 +30,13 @@ runX11:
   endif
   
 shell:
-	@mkdir -p ${STORAGE}
-	@docker run -ti --rm ${img} /bin/bash
-
+   ifdef img
+      @docker run -ti --rm ${img} /bin/bash
+   else
+        @echo 'img= not defined'
+   endif
+	
+        
 clean:
   ifdef img
         @docker rmi ${IMAGE}
